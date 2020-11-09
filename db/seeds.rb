@@ -9,6 +9,12 @@
 
 
 # USER SEED DATA
-emily = User.created(username: "Emily", email: "e@email.com", password_digest: "asdf")
+emily = User.create(username: "Emily", email: "e@email.com", password_digest: "asdf")
 irena = User.create(username: "Irena", email: "i@email.com", password_digest: "asdf")
 
+# TIMELINE SEED DATA
+beatles_albums = Timeline.create(title: "Beatles Albums", description: "A timeline showing the Beatles' discography", user_id: 1)
+
+# EVENT SEED DATA
+hard_days_night = Event.create(year: 1963, title: "Hard Days Night", description: "Beatles release their fan-favorite to much acclaim", timeline_id: 1)
+revolver = Event.create(year: 1967, title: "Revolver", description: "Another fan favorite released", timeline_id: 1)
