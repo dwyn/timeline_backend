@@ -27,7 +27,7 @@ class Api::V1::TimelinesController < ApplicationController
     private
 
     def timeline_params
-        require(:timeline).permit(:title, :description, :user_id)
+        params.require(:timeline).permit(:title, :description, :user_id)
     end
 
 end
