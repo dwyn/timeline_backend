@@ -16,8 +16,9 @@ class Api::V1::TimelinesController < ApplicationController
 
     def create
         timeline = Timeline.new(timeline_params)
+        byebug
         if timeline.save
-            render json: timeline, status: :accepted
+            render json: TimelineSerializer.new(timeline), status: :accepted
         else
             render json: {errors: timeline.errors.full_messages}, status: :unprocessible_entity
         end

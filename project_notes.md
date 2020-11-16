@@ -5,3 +5,6 @@ Questions:
 
     - what does serializer file have to include?
     - what do controller methods have to include to work with serializer?
+
+- Re: project concept
+    - 
