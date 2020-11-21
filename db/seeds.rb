@@ -11,11 +11,11 @@ Timeline.destroy_all
 Event.destroy_all
 
 # USER SEED DATA
-emily = User.create(username: "Emily", email: "e@email.com", password_digest: "asdf")
+# emily = User.create(username: "Emily", email: "e@email.com", password_digest: "asdf")
 
 
 # TIMELINE SEED DATA
-beatles_albums = Timeline.create(title: "Beatles Albums", description: "A timeline showing the Beatles' discography", user_id: emily.id)
+beatles_albums = Timeline.create(title: "Beatles Albums", description: "A timeline showing the Beatles' discography")
 
 
 # EVENT SEED DATA
