@@ -3,8 +3,12 @@ class Api::V1::TimelinesController < ApplicationController
 
     def index
         timelines = Timeline.all
-        render json: timelines, include:
-            [:events => {:only => [:year, :title, :description]}]
+        render json: TimelineSerializer.new(timelines)
+    
+
+        # render json: timelines, include:
+        #     [:events => {:only => [:year, :title, :description]}]
+
         # render json: TimelineSerializer.new(timelines)
         # options = {
         #     include: [:events]
@@ -23,7 +27,7 @@ class Api::V1::TimelinesController < ApplicationController
     private
 
     def timeline_params
-        params.require(:timeline).permit(:title, :description
+        params.require(:timeline).permit(:title, :description)
             #  :user_id)
     end
 
